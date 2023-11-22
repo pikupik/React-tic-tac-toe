@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+.bird {
+  position: fixed;
+  background-color: #fff; /* Warna burung (misalnya putih) */
+  width: 20px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+body {
+  margin: 0;
+  font-family: Sans-Serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+.game-board {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8); /* Warna latar belakang elemen permainan */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan lembut */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+  background-color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.game-info {
+  font-size: 2.5rem;
+  color: #34495e;
+}
+
+.jumpto {
+  font-size: 2.5rem;
+  margin: 5px;
+  color: #e74c3c;
+}
+
+/* Menambahkan gaya responsif untuk perangkat seluler */
+@media screen and (max-width: 600px) {
+  .square {
+    width: 48px;  
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .board {
+    width: 150px; 
+    height: 150px;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+  .status,
+  .game-info,
+  .jumpto {
+    font-size: 1rem;
+    text-align: center; 
+  }
+}
